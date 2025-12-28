@@ -1,0 +1,290 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "university": "University",
+      "personal": "Personal",
+      "work": "Work",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Full Stack Developer & Tech Innovator",
+      "description": "Passionate about creating cutting-edge solutions that bridge the gap between innovative technology and exceptional user experiences. Specialized in modern web development, AI integration, and scalable system architecture.",
+      "cta": "Get In Touch"
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "Crafting digital experiences with precision and creativity",
+      "story": {
+        "title": "My Story",
+        "text1": "With over 5 years of experience in software development, I've had the privilege of working on diverse projects ranging from enterprise applications to innovative startups. My journey began with a Computer Science degree, but my passion for technology extends far beyond formal education.",
+        "text2": "I believe in the power of clean code, intuitive design, and scalable architecture. Every project I undertake is an opportunity to push boundaries and create something extraordinary."
+      },
+      "what": {
+        "title": "What I Do",
+        "text1": "I specialize in full-stack development with a focus on modern JavaScript frameworks, cloud architecture, and emerging technologies. My approach combines technical expertise with creative problem-solving to deliver solutions that exceed expectations.",
+        "text2": "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers in the tech community."
+      }
+    },
+    "skills": {
+      "frontend": {
+        "title": "Frontend Development",
+        "tech": "React, Vue.js, Angular, TypeScript, Modern CSS, WebGL, Three.js"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "tech": "Node.js, Python, Java, PostgreSQL, MongoDB, Redis, GraphQL"
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "tech": "AWS, Docker, Kubernetes, CI/CD, Terraform, Monitoring"
+      },
+      "emerging": {
+        "title": "Emerging Tech",
+        "tech": "AI/ML, Blockchain, IoT, Microservices, Serverless Architecture"
+      }
+    },
+    "university": {
+      "title": "University Projects",
+      "subtitle": "Academic excellence meets practical application",
+      "project1": {
+        "title": "Distributed Database System",
+        "description": "Designed and implemented a fault-tolerant distributed database system using consensus algorithms and replication strategies for my senior thesis project."
+      },
+      "project2": {
+        "title": "AI Chess Engine",
+        "description": "Developed an intelligent chess engine using minimax algorithm with alpha-beta pruning and neural network evaluation functions."
+      },
+      "project3": {
+        "title": "Social Media Analytics Platform",
+        "description": "Built a comprehensive analytics platform for social media sentiment analysis using machine learning and real-time data processing."
+      }
+    },
+    "personal": {
+      "title": "Personal Projects",
+      "subtitle": "Passion projects that showcase creativity and innovation",
+      "project1": {
+        "title": "AI Music Composer",
+        "description": "An intelligent music composition tool that generates melodies and harmonies using deep learning models trained on classical and contemporary music."
+      },
+      "project2": {
+        "title": "Smart Home Hub",
+        "description": "A comprehensive IoT solution for home automation with voice control, energy monitoring, and predictive maintenance capabilities."
+      },
+      "project3": {
+        "title": "VR Physics Playground",
+        "description": "An immersive VR experience that allows users to interact with realistic physics simulations in a virtual environment."
+      },
+      "project4": {
+        "title": "Crypto Trading Bot",
+        "description": "An automated cryptocurrency trading system using machine learning algorithms for market analysis and decision making."
+      }
+    },
+    "work": {
+      "title": "Work Projects",
+      "subtitle": "Professional solutions delivering real business value",
+      "project1": {
+        "title": "Enterprise Resource Planning System",
+        "description": "Led the development of a comprehensive ERP system for a Fortune 500 company, managing inventory, finances, and human resources across multiple locations."
+      },
+      "project2": {
+        "title": "Healthcare Management Platform",
+        "description": "Designed and developed a HIPAA-compliant healthcare management system serving over 50,000 patients with real-time monitoring and analytics."
+      },
+      "project3": {
+        "title": "Real-time Analytics Dashboard",
+        "description": "Built a high-performance analytics dashboard processing millions of events per second for a leading e-commerce platform."
+      },
+      "project4": {
+        "title": "Global Supply Chain Optimizer",
+        "description": "Developed an AI-powered supply chain optimization system that reduced costs by 30% and improved delivery times for international logistics."
+      }
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "subtitle": "Let's create something amazing together",
+      "info": {
+        "title": "Contact Information",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "response_time": "Response Time",
+        "response_text": "Usually within 24 hours"
+      },
+      "form": {
+        "title": "Send Message",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send Message"
+      }
+    },
+    "common": {
+      "view_code": "View Code →",
+      "documentation": "Documentation →",
+      "play_game": "Play Game →",
+      "live_demo": "Live Demo →",
+      "research_paper": "Research Paper →",
+      "try_it": "Try It →",
+      "demo_video": "Demo Video →",
+      "download": "Download →",
+      "showcase": "Showcase →",
+      "performance": "Performance →",
+      "strategy": "Strategy →",
+      "case_study": "Case Study →",
+      "architecture": "Architecture →",
+      "impact_report": "Impact Report →",
+      "security": "Security →",
+      "metrics": "Metrics →",
+      "roi_analysis": "ROI Analysis →",
+      "algorithm": "Algorithm →"
+    }
+  },
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À Propos",
+      "projects": "Projets",
+      "university": "Université",
+      "personal": "Personnel",
+      "work": "Travail",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Développeuse Full Stack & Innovatrice Tech",
+      "description": "Passionnée par la création de solutions de pointe qui comblent le fossé entre la technologie innovante et les expériences utilisateur exceptionnelles. Spécialisée dans le développement web moderne, l'intégration IA et l'architecture système évolutive.",
+      "cta": "Contactez-moi"
+    },
+    "about": {
+      "title": "À Propos de Moi",
+      "subtitle": "Créer des expériences numériques avec précision et créativité",
+      "story": {
+        "title": "Mon Histoire",
+        "text1": "Avec plus de 5 ans d'expérience en développement logiciel, j'ai eu le privilège de travailler sur des projets divers allant des applications d'entreprise aux startups innovantes. Mon parcours a commencé avec un diplôme en informatique, mais ma passion pour la technologie s'étend bien au-delà de l'éducation formelle.",
+        "text2": "Je crois au pouvoir du code propre, de la conception intuitive et de l'architecture évolutive. Chaque projet que j'entreprends est une opportunité de repousser les limites et de créer quelque chose d'extraordinaire."
+      },
+      "what": {
+        "title": "Ce Que Je Fais",
+        "text1": "Je me spécialise dans le développement full-stack avec un focus sur les frameworks JavaScript modernes, l'architecture cloud et les technologies émergentes. Mon approche combine l'expertise technique avec la résolution créative de problèmes pour livrer des solutions qui dépassent les attentes.",
+        "text2": "Quand je ne code pas, vous me trouverez en train d'explorer de nouvelles technologies, contribuer à des projets open-source, ou encadrer des développeurs aspirants dans la communauté tech."
+      }
+    },
+    "skills": {
+      "frontend": {
+        "title": "Développement Frontend",
+        "tech": "React, Vue.js, Angular, TypeScript, CSS Moderne, WebGL, Three.js"
+      },
+      "backend": {
+        "title": "Développement Backend",
+        "tech": "Node.js, Python, Java, PostgreSQL, MongoDB, Redis, GraphQL"
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "tech": "AWS, Docker, Kubernetes, CI/CD, Terraform, Surveillance"
+      },
+      "emerging": {
+        "title": "Technologies Émergentes",
+        "tech": "IA/ML, Blockchain, IoT, Microservices, Architecture Serverless"
+      }
+    },
+    "university": {
+      "title": "Projets Universitaires",
+      "subtitle": "L'excellence académique rencontre l'application pratique",
+      "project1": {
+        "title": "Système de Base de Données Distribuée",
+        "description": "Conçu et implémenté un système de base de données distribuée tolérant aux pannes utilisant des algorithmes de consensus et des stratégies de réplication pour mon projet de thèse de fin d'études."
+      },
+      "project2": {
+        "title": "Moteur d'Échecs IA",
+        "description": "Développé un moteur d'échecs intelligent utilisant l'algorithme minimax avec élagage alpha-bêta et des fonctions d'évaluation de réseau de neurones."
+      },
+      "project3": {
+        "title": "Plateforme d'Analyse des Médias Sociaux",
+        "description": "Construit une plateforme d'analyse complète pour l'analyse de sentiment des médias sociaux utilisant l'apprentissage automatique et le traitement de données en temps réel."
+      }
+    },
+    "personal": {
+      "title": "Projets Personnels",
+      "subtitle": "Projets de passion qui montrent créativité et innovation",
+      "project1": {
+        "title": "Compositeur Musical IA",
+        "description": "Un outil de composition musicale intelligent qui génère des mélodies et harmonies utilisant des modèles d'apprentissage profond entraînés sur la musique classique et contemporaine."
+      },
+      "project2": {
+        "title": "Hub Maison Intelligente",
+        "description": "Une solution IoT complète pour la domotique avec contrôle vocal, surveillance énergétique et capacités de maintenance prédictive."
+      },
+      "project3": {
+        "title": "Terrain de Jeu Physique VR",
+        "description": "Une expérience VR immersive qui permet aux utilisateurs d'interagir avec des simulations physiques réalistes dans un environnement virtuel."
+      },
+      "project4": {
+        "title": "Bot de Trading Crypto",
+        "description": "Un système de trading de cryptomonnaie automatisé utilisant des algorithmes d'apprentissage automatique pour l'analyse de marché et la prise de décision."
+      }
+    },
+    "work": {
+      "title": "Projets Professionnels",
+      "subtitle": "Solutions professionnelles apportant une vraie valeur business",
+      "project1": {
+        "title": "Système de Planification des Ressources d'Entreprise",
+        "description": "Dirigé le développement d'un système ERP complet pour une entreprise Fortune 500, gérant l'inventaire, les finances et les ressources humaines à travers plusieurs sites."
+      },
+      "project2": {
+        "title": "Plateforme de Gestion Médicale",
+        "description": "Conçu et développé un système de gestion médicale conforme HIPAA servant plus de 50 000 patients avec surveillance et analyses en temps réel."
+      },
+      "project3": {
+        "title": "Tableau de Bord Analytique Temps Réel",
+        "description": "Construit un tableau de bord analytique haute performance traitant des millions d'événements par seconde pour une plateforme e-commerce leader."
+      },
+      "project4": {
+        "title": "Optimiseur de Chaîne d'Approvisionnement Globale",
+        "description": "Développé un système d'optimisation de chaîne d'approvisionnement alimenté par IA qui a réduit les coûts de 30% et amélioré les délais de livraison pour la logistique internationale."
+      }
+    },
+    "contact": {
+      "title": "Contactez-moi",
+      "subtitle": "Créons ensemble quelque chose d'incroyable",
+      "info": {
+        "title": "Informations de Contact",
+        "email": "Email",
+        "phone": "Téléphone",
+        "location": "Localisation",
+        "response_time": "Temps de Réponse",
+        "response_text": "Généralement sous 24 heures"
+      },
+      "form": {
+        "title": "Envoyer un Message",
+        "name": "Nom",
+        "email": "Email",
+        "subject": "Sujet",
+        "message": "Message",
+        "send": "Envoyer le Message"
+      }
+    },
+    "common": {
+      "view_code": "Voir le Code →",
+      "documentation": "Documentation →",
+      "play_game": "Jouer →",
+      "live_demo": "Démo Live →",
+      "research_paper": "Article de Recherche →",
+      "try_it": "Essayer →",
+      "demo_video": "Vidéo Démo →",
+      "download": "Télécharger →",
+      "showcase": "Présentation →",
+      "performance": "Performance →",
+      "strategy": "Stratégie →",
+      "case_study": "Étude de Cas →",
+      "architecture": "Architecture →",
+      "impact_report": "Rapport d'Impact →",
+      "security": "Sécurité →",
+      "metrics": "Métriques →",
+      "roi_analysis": "Analyse ROI →",
+      "algorithm": "Algorithme →"
+    }
+  }
+}

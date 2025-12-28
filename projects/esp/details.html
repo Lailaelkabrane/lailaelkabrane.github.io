@@ -1,0 +1,56 @@
+<h2>IoT Home Security System – ESP32 & Cloud-Based Architecture</h2>
+<p class="section-subtitle">
+  Smart home security system combining IoT sensors, serverless backend, and a secure cloud dashboard
+</p>
+     <div class="project-screenshots">
+  <div class="screenshot" onclick="openLightbox('esp-1')">
+    <img src="projects/esp/images/maquette.png" alt="IoT System Mockup">
+    <p>Physical Smart Home Maquette with Integrated IoT Sensors
+</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('esp-2')">
+    <img src="projects/esp/images/Dash.png" alt="IoT Admin Dashboard">
+    <p>Real-Time Admin Dashboard for Home Security Monitoring</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('esp-3')">
+    <img src="projects/esp/images/analy.png" alt="IoT Sensors Evolution">
+    <p>Sensor Data Analysis & IoT System Evolution Overview</p>
+  </div>
+</div>
+
+      
+<div class="project-details">
+  <h3>Project Overview</h3>
+  <p>
+    The IoT Home Security System is a comprehensive solution designed to enhance residential security
+    through the integration of IoT sensors, a serverless backend, and a secure cloud-based dashboard.
+    The system provides real-time monitoring, alerting, and data analytics to ensure the safety of homes.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul class="feature-list">
+    <li>ESP32-based IoT sensors for motion detection, door/window status, and environmental monitoring</li>
+    <li>Serverless backend architecture using AWS Lambda for scalable event processing</li>
+    <li>Real-time data transmission via MQTT protocol to ensure low-latency communication</li>
+    <li>Secure cloud dashboard for remote monitoring and control of home security system</li>
+    <li>Automated alerts and notifications via SMS and email for security events</li>
+    <li>Data logging and historical analysis of sensor data for trend identification</li>
+    <li>User authentication and role-based access control for enhanced security</li>
+    <li>Modular design allowing easy addition of new sensors and features</li>
+    <li>Energy-efficient operation with low power consumption IoT devices</li>
+    <li>User-friendly interface for seamless interaction with the security system</li>
+  </ul>
+
+  <h3>Technical Implementation</h3>
+<p>
+  The system is built around an ESP32 microcontroller connected to multiple sensors,
+  including gas, flame, water leakage, and RFID modules. Sensor data is transmitted
+  securely in JSON format to a Cloudflare Worker, where HMAC SHA-256 verification,
+  device authentication, and data validation are performed. Validated data is stored
+  in a Supabase PostgreSQL database, which serves as the central cloud data layer.
+  The administrative dashboard is developed using React, Vite, and Tailwind CSS,
+  hosted on Firebase Hosting, and secured with Firebase Authentication and
+  email-based multi-factor authentication (MFA). All secrets and credentials are
+  managed using Cloudflare Secrets to ensure strong security and system integrity.
+</p>
+</div>

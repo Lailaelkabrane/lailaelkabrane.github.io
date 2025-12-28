@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EL KABRANE Laila- Portfolio</title>
+     <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .modal-content {
+      background-color: #1a1a2e;
+      margin: 2% auto;
+      padding: 2.5rem;
+      border-radius: 12px;
+      max-width: 1200px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      color: #e6e6e6;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.8rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+      z-index: 1001;
+    }
+    
+    .close-modal:hover {
+      color: var(--accent-cyan);
+    }
+    
+    .project-screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .screenshot {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .screenshot:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .screenshot img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .screenshot p {
+      padding: 1rem;
+      background: #16213e;
+      margin: 0;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    .project-details {
+      margin-top: 2.5rem;
+    }
+    
+    .feature-list {
+      margin: 1.5rem 0;
+      padding-left: 1.8rem;
+      columns: 2;
+      column-gap: 2rem;
+    }
+    
+    .feature-list li {
+      margin-bottom: 0.8rem;
+      break-inside: avoid;
+    }
+    
+    h2 {
+      color: var(--reddit-blue);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: var(--reddit-blue);
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      
+      padding-bottom: 0.5rem;
+    }
+    
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      text-align: center;
+    }
+    
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 80%;
+      margin: 5% auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(0, 200, 200, 0.3);
+    }
+    
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .close-lightbox:hover {
+      color: var(--accent-cyan);
+    }
+    
+    .lightbox-caption {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    
+    /* Tech tags in modal */
+    .modal-tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+    
+    .modal-tech-tag {
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+      }
+      
+      .project-screenshots {
+        
+        
+  grid-template-columns: 1fr;
+  
+      }
+      
+      .feature-list {
+        columns: 1;
+      }
+      
+      .lightbox-content {
+        max-width: 95%;
+        max-height: 70%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">EL</div>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link" onclick="showPage('home')" data-key="nav.home">Home</a></li>
+        <li><a href="#about" class="nav-link" onclick="showPage('about')" data-key="nav.about">About</a></li>
+        <li class="dropdown">
+          <a class="nav-link" data-key="nav.projects">Projects</a>
+          <ul class="dropdown-content">
+            <li><a href="#university" onclick="showPage('university')" data-key="nav.university">University</a></li>
+            <li><a href="#personal" onclick="showPage('personal')" data-key="nav.personal">Personal</a></li>
+            <li><a href="#work" onclick="showPage('work')" data-key="nav.work">Work</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact" class="nav-link" onclick="showPage('contact')" data-key="nav.contact">Contact</a></li>
+      </ul>
+      <!-- <div class="language-selector">
+        <button class="lang-btn active" onclick="setLanguage('en')" id="lang-en">EN</button>
+        <button class="lang-btn" onclick="setLanguage('fr')" id="lang-fr">FR</button>
+      </div> -->
+    </div>
+  </div>
+</nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div id="home" class="page active">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>EL KABRANE Laila</h1>
+            <h2 data-key="hero.title">Data Analyst & AI Specialist</h2>
+<p data-key="hero.description">
+I turn data into insights and ideas into action. From building AI models to uncovering hidden patterns, I transform complex datasets into solutions that make a real impact. I love exploring challenges, experimenting with new tools, and creating projects that bridge technology and meaningful results. Dive in, check out my work, and see how data and AI can bring ideas to life.
+</p>
+            <a href="#contact" class="cta-button" onclick="showPage('contact')" data-key="hero.cta">Get In Touch</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+   <!-- About Page -->
+<div id="about" class="page">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-key="about.title">About Me</h2>
+      <p class="section-subtitle" data-key="about.subtitle">Turning data, AI, and code into impactful solutions</p>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <h3 data-key="about.story.title">My Story</h3>
+          <p data-key="about.story.text1">I’m a Master’s student specializing in Data Analytics and Artificial Intelligence at Ibn Zohr University. Over the years, I’ve explored software development, web technologies, and AI, building projects that range from real-time object detection and AI painting systems to data-driven energy forecasts and cybersecurity platforms.</p>
+          
+          <p data-key="about.story.text2">I’m passionate about transforming raw data into meaningful insights and creating solutions that combine technical depth with practical impact. Every project I tackle is a chance to innovate and learn.</p>
+        </div>
+        
+        <div class="about-text">
+          <h3 data-key="about.what.title">What I Do</h3>
+          <p data-key="about.what.text1">I specialize in AI/ML, data analytics, and full-stack development. I work with Python, Java, JavaScript, and modern web frameworks to design interactive applications, analyze complex datasets, and deploy scalable solutions.</p>
+          
+          <p data-key="about.what.text2">Beyond coding, I enjoy experimenting with emerging technologies, creating innovative projects, and contributing to the tech community by sharing knowledge and ideas.</p>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4 data-key="skills.frontend.title">Frontend Development</h4>
+          <p data-key="skills.frontend.tech">HTML, CSS, JavaScript, React, Tailwind, Streamlit, Pygame</p>
+        </div>
+        
+        <div class="skill-card">
+          <h4 data-key="skills.backend.title">Backend & Databases</h4>
+          <p data-key="skills.backend.tech">Python, Java, PHP, MySQL, PostgreSQL, SQLite, Supabase</p>
+        </div>
+        
+        <div class="skill-card">
+          <h4 data-key="skills.cloud.title">Cloud & Deployment</h4>
+          <p data-key="skills.cloud.tech">Docker, Cloudflare Workers, Firebase, Hugging Face Spaces, Serverless Architecture</p>
+        </div>
+        
+        <div class="skill-card">
+          <h4 data-key="skills.emerging.title">AI & Data Analytics</h4>
+          <p data-key="skills.emerging.tech">Machine Learning, Deep Learning, NLP, Computer Vision, Time Series Forecasting, Data Visualization (Matplotlib, Seaborn, Altair)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+    <!-- University Projects Page -->
+    <div id="university" class="page">
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title" data-key="university.title">University Projects</h2>
+          <p class="section-subtitle" data-key="university.subtitle">Academic excellence meets practical application</p>
+          
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/cyberMentor/images/logo.png" alt="Project Image" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title" data-key="university.project1.title">CyberMentor – AI-Powered Cyber Attack Analysis & Defense Assistant</h3>
+                <p class="project-description" data-key="university.project1.description">CyberMentor is an AI-powered system designed to detect and classify cyber attacks
+  and provide automated defense recommendations. The project uses NLP and large
+  language models to analyze security-related data and assist in improving
+  cybersecurity decision-making.</p>
+                <div class="project-tech">
+                 <span class="tech-tag">Python</span>
+                 <span class="tech-tag">NLP</span>
+                 <span class="tech-tag">LLM</span>
+                 <span class="tech-tag">RAG</span>
+                 <span class="tech-tag">Cybersecurity</span>
+                 <span class="tech-tag">Machine Learning</span>
+                 <span class="tech-tag">Vector Database</span>
+                </div>
+                <div class="project-links">
+                  
+                  <a href="#"
+   class="project-link"
+   onclick="openProject('projects/cyberMentor/details.html'); return false;">
+   View Details →
+</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/elect/images/logo.png" alt="Project Image" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title" data-key="university.project2.title"> PredictEnergy-MA – Electricity Consumption Forecasting in Morocco</h3>
+                <p class="project-description" data-key="university.project2.description">PredictEnergy-MA is a Big Data and AI project focused on forecasting electricity
+    consumption in Morocco using historical energy and climate data processed through
+    a Hadoop-based data pipeline.</p>
+                <div class="project-tech">
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">Hadoop</span>
+    <span class="tech-tag">HDFS</span>
+    <span class="tech-tag">ETL</span>
+    <span class="tech-tag">PySpark</span>
+    <span class="tech-tag">Big Data</span>
+    <span class="tech-tag">AI</span>
+  </div>
+
+                <div class="project-links">
+                  
+                  <a href="#"
+   class="project-link"
+   onclick="openProject('projects/elect/detaiils.html'); return false;">
+   View Details →
+</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/esp/images/logo.png" alt="Project Image" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title" data-key="university.project3.title">IoT Home Security System</h3>
+                <p class="project-description" data-key="university.project3.description">A smart home security system combining IoT sensors with a serverless cloud
+    backend. The system monitors environmental hazards, controls access securely,
+    and provides a real-time admin dashboard for monitoring and alerts.</p>
+                <div class="project-tech">
+    <span class="tech-tag">ESP32</span>
+    <span class="tech-tag">IoT</span>
+    <span class="tech-tag">Cloud</span>
+    <span class="tech-tag">Cloudflare Workers</span>
+    <span class="tech-tag">Supabase</span>
+    <span class="tech-tag">Firebase</span>
+    <span class="tech-tag">React.js</span>
+    <span class="tech-tag">Tailwind CSS</span>
+  </div>
+
+                <div class="project-links">
+                  
+                  <a href="#"
+   class="project-link"
+   onclick="openProject('projects/esp/details.html'); return false;">
+   View Details →
+</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/paint/images/logo.png" alt="Project Image" />
+              </div>
+
+<div class="project-content">
+  <h3 class="project-title">
+    AI Painter – Gesture-Based Virtual Painting
+  </h3>
+
+  <p class="project-description">
+    AI Painter is an interactive virtual painting system that allows users to draw
+    on a digital canvas using hand gestures. Leveraging computer vision with
+    OpenCV and MediaPipe, the system tracks hand movements in real time, supports
+    tool selection via gestures, and enables an intuitive, hands-free creative experience.
+  </p>
+
+  <div class="project-tech">
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">OpenCV</span>
+    <span class="tech-tag">MediaPipe</span>
+    <span class="tech-tag">Computer Vision</span>
+    <span class="tech-tag">Gesture Recognition</span>
+  </div>
+
+  <div class="project-links">
+    
+     <a href="#"
+   class="project-link"
+   onclick="openProject('projects/paint/details.html'); return false;">
+   View Details →
+</a>
+  </div>
+</div>
+</div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Personal Projects Page -->
+    <div id="personal" class="page">
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title" data-key="personal.title">Personal Projects</h2>
+          <p class="section-subtitle" data-key="personal.subtitle">Passion projects that showcase creativity and innovation</p>
+          
+          <div class="projects-grid">
+            <!-- Reddit Sentiment Intelligence Platform -->
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/reddit-sentiment/images/logo1.png" alt="Project Image" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Reddit Sentiment Intelligence</h3>
+                <p class="project-description">A comprehensive platform for analyzing sentiment trends across Reddit communities, tracking public opinion on various topics in real-time.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">NLP</span>
+                  <span class="tech-tag">Reddit API</span>
+                  <span class="tech-tag">Data Visualization</span>
+                </div>
+                <div class="project-links">
+                  <a href="#"
+   class="project-link"
+   onclick="openProject('projects/reddit-sentiment/details.html'); return false;">
+   View Details →
+</a>
+
+                  
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Work Projects Page -->
+    <div id="work" class="page">
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title" data-key="work.title">Work Projects</h2>
+          <p class="section-subtitle" data-key="work.subtitle">Professional solutions delivering real business value</p>
+          
+          <div class="projects-grid">
+            <div class="project-card">
+             <div class="project-image">
+                <img src="projects/linkedin/images/logo.png" alt="Project Image" />
+              </div>
+
+<div class="project-content">
+  <h3 class="project-title">
+    JobMarket – LinkedIn Professional Profiles Analysis
+  </h3>
+
+  <p class="project-description">
+    JobMarket is a data engineering and analysis project focused on extracting trends
+    and insights from professional profiles on LinkedIn in the maintenance and
+    reliability sector. The system processes profile data, segments the market, and
+    generates actionable insights using data analysis and machine learning techniques.
+  </p>
+
+  <div class="project-tech">
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">Data Engineering</span>
+    <span class="tech-tag">Data Analysis</span>
+    <span class="tech-tag">Machine Learning</span>
+    <span class="tech-tag">Apify</span>
+  </div>
+
+  <div class="project-links">
+    
+    <a href="#"
+   class="project-link"
+   onclick="openProject('projects/linkedin/details1.html'); return false;">
+   View Details →
+</a>
+  </div>
+</div>
+
+            </div>
+            
+            
+            
+            
+          
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Page -->
+    <!-- Contact Page -->
+<div id="contact" class="page">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-key="contact.title">Get In Touch</h2>
+      <p class="section-subtitle" data-key="contact.subtitle">Let's connect and create something impactful</p>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 style="color: var(--accent-cyan); margin-bottom: 2rem;" data-key="contact.info.title">Contact Information</h3>
+          
+          <div class="contact-item">
+            <h4 data-key="contact.info.email">Email</h4>
+            <p>lailaelkabrane@gmail.com</p>
+          </div>
+          
+          <div class="contact-item">
+            <h4 data-key="contact.info.phone">Phone</h4>
+            <p>+212 6 15 99 72 91</p>
+          </div>
+          
+          <div class="contact-item">
+            <h4 data-key="contact.info.location">Location</h4>
+            <p>Agadir, Morocco</p>
+          </div>
+          
+          <div class="contact-item">
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/lailaelkabrane</p>
+          </div>
+          
+          <div class="contact-item">
+            <h4>GitHub</h4>
+            <p>github.com/lailaelkabrane</p>
+          </div>
+          
+          <div class="contact-item">
+            <h4 data-key="contact.info.response_time">Response Time</h4>
+            <p data-key="contact.info.response_text">Usually within 24 hours</p>
+          </div>
+        </div>
+        <div class="contact-placeholder">
+  <p>          </p>
+  <p>          </p>
+  <p>          </p>
+  <p>          </p>
+  <p>          </p>
+  <p>          </p>
+  <img src="contact-us.webp" alt="Contact illustration" style="width:100%;max-width:800px;">
+  <p class="section-subtitle" >    Feel free to reach out via email, LinkedIn, or GitHub!</p>
+</div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+  </main> 
+  <div id="project-modal" class="modal">
+  <div class="modal-content" id="modal-body">
+    <span class="close-modal" onclick="closeModal('project-modal')">&times;</span>
+    <!-- Project content will be injected here -->
+  </div>
+</div>
+
+  <!-- Lightbox for images -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+        
+        
+ 
+
+                       
+
+  
+
+    <script src="script.js"></script>
+  
+
+</body>
+</html>

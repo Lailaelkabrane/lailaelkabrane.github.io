@@ -1,0 +1,48 @@
+<h2>PredictEnergy-MA  Electricity Consumption Forecasting in Morocco</h2>
+<p class="section-subtitle">Big Data & AI-powered prediction of national electricity consumption</p>
+
+<div class="project-screenshots">
+  <div class="screenshot" onclick="openLightbox('elec-1')">
+    <img src="projects/elect/images/1.png" alt="Actual vs Predicted Consumption Graph">
+    <p>Actual vs Predicted Electricity Consumption Graph</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('elec-2')">
+    <img src="projects/elect/images/2.png" alt="Residual Error Analysis">
+    <p>Residual Error Analysis for LSTM and Prophet Models</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('elec-3')">
+    <img src="projects/elect/images/3.png" alt="Morocco Consumption Forecast">
+    <p>Forecast of Morocco's Electricity Consumption</p>
+  </div>
+</div>
+
+<div class="project-details">
+  <h3>Project Overview</h3>
+  <p>
+    PredictEnergy-MA is a university project focused on predicting Morocco's electricity consumption using Big Data and Artificial Intelligence. 
+    The system leverages public datasets from the World Bank and World Bank Climate Data (1990–2023) to model energy evolution in the country, 
+    integrating climatic parameters and energy mix transformations.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul class="feature-list">
+    <li>Collection and integration of Moroccan energy and climate data</li>
+    <li>Structured data pipeline: raw → bronze → silver → gold layers</li>
+    <li>Data processing and aggregation using PySpark</li>
+    <li>Forecasting models including Prophet and LSTM for future consumption</li>
+    <li>Visualization of actual and predicted consumption in Streamlit</li>
+    <li>Error analysis and model performance evaluation</li>
+    <li>Containerized environment using Docker</li>
+    <li>Storage and deployment using Hadoop HDFS</li>
+    <li>Live deployment on Hugging Face Spaces</li>
+  </ul>
+
+  <h3>Technical Implementation</h3>
+  <p>
+    The project is developed using a Big Data pipeline for handling large-scale energy and climate datasets. 
+    PySpark is used for data cleaning, transformation, and aggregation across multiple layers of the pipeline. 
+    Time series forecasting models (Prophet and LSTM) are applied to estimate future electricity consumption. 
+    The results are visualized in an interactive Streamlit dashboard. 
+    The system is containerized with Docker, stores data in Hadoop HDFS, and is deployed on Hugging Face Spaces for easy access.
+  </p>
+</div>
