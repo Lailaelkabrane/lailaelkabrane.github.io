@@ -1,0 +1,80 @@
+<h2>CV Booster – AI-Powered CV Optimization for the SUBUL Platform</h2>
+<p class="section-subtitle">Built during my internship at Smartovate, alongside Subul IN</p>
+
+<div class="project-screenshots">
+  <div class="screenshot" onclick="openLightbox('cvb-1')">
+    <img src="projects/cvbooster/images/1.png" alt="CV Booster landing page">
+    <p>Landing page — import a CV to start the AI-powered boost</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('cvb-2')">
+    <img src="projects/cvbooster/images/2.png" alt="Initial ATS score diagnosis">
+    <p>Initial ATS score diagnosis on the uploaded CV</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('cvb-3')">
+    <img src="projects/cvbooster/images/3.png" alt="Enrichment step from SUBUL platform data">
+    <p>Enrichment step — auto-integrating labs, certifications and quiz results from SUBUL</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('cvb-4')">
+    <img src="projects/cvbooster/images/4.png" alt="Before and after ATS score breakdown">
+    <p>Detailed before/after ATS score breakdown (39 → 94)</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('cvb-5')">
+    <img src="projects/cvbooster/images/5.png" alt="Explainable ATS scoring detail">
+    <p>Explainable scoring — why a section scored low and the exact fix to apply</p>
+  </div>
+  <div class="screenshot" onclick="openLightbox('cvb-6')">
+    <img src="projects/cvbooster/images/6.png" alt="Final boosted CV ready for download">
+    <p>Final result — boosted CV ready to download in multiple formats</p>
+  </div>
+</div>
+
+<div class="modal-tech-tags">
+  <span class="modal-tech-tag">Python</span>
+  <span class="modal-tech-tag">FastAPI</span>
+  <span class="modal-tech-tag">Azure OpenAI</span>
+  <span class="modal-tech-tag">NLP</span>
+  <span class="modal-tech-tag">ATS Scoring</span>
+  <span class="modal-tech-tag">DOCX Generation</span>
+</div>
+
+<div class="project-details">
+  <h3>Project Overview</h3>
+  <p>
+    CV Booster is an AI-powered CV optimization tool built as part of the SUBUL platform during my
+    internship at Smartovate, alongside Subul IN. It guides users through a 5-step flow — Import,
+    ATS Score, Enrich, Boost, and Result — to turn a raw CV into an ATS-optimized document, while
+    automatically pulling in achievements the user already has on the SUBUL e-learning platform.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul class="feature-list">
+    <li>Drag-and-drop CV import (PDF) with instant AI analysis</li>
+    <li>Real-time ATS scoring engine (0–100) evaluating key sections, work experience, contact info,
+      professional summary, technical skills, CV length, keyword matching, and languages</li>
+    <li>Explainable scoring: for each criterion, the tool shows exactly why a score was given, what was
+      detected versus missing, and the precise fix needed to gain points</li>
+    <li>Guided completion flow for missing required sections (e.g. languages) with quick-add suggestions</li>
+    <li>Automatic enrichment from the user's SUBUL profile: completed labs, validated certifications,
+      and a positioning quiz score used to detect the user's domain and expertise level</li>
+    <li>One-click "Boost" that rewrites and restructures the CV, recalculating the ATS score live</li>
+    <li>Multiple export formats (ATS Optimized, Basic/Classic, Modern/Creative) generated as downloadable
+      .docx files without needing to regenerate the CV from scratch</li>
+  </ul>
+
+  <h3>Technical Implementation</h3>
+  <p>
+    The backend is built with Python and FastAPI, using Azure OpenAI models to analyze CV content,
+    generate the explainable ATS breakdown, and rewrite sections such as the professional summary with
+    stronger, keyword-rich language. Enrichment data (labs, certifications, quiz scores) is fetched
+    directly from the SUBUL platform's user profile and merged into the CV content. The final boosted
+    CV is rendered into multiple .docx templates (ATS-safe single-column layout, classic, and modern
+    formats) that can be downloaded instantly.
+  </p>
+
+  <h3>Impact</h3>
+  <p>
+    In testing, CV Booster took CVs with low ATS scores (around 39/100) and consistently boosted them
+    into the 90+ range by filling missing sections, improving keyword coverage, and strengthening the
+    professional summary, directly increasing the chances of passing automated recruiter filters.
+  </p>
+</div>

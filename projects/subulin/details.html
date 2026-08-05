@@ -1,0 +1,63 @@
+<h2>Subul IN – AI-Powered LinkedIn Growth Assistant</h2>
+<p class="section-subtitle">Final year project (PFE) — Chrome extension built during my internship at Smartovate</p>
+
+<div class="project-video">
+  <video controls preload="metadata" poster="projects/subulin/video/poster.jpg">
+    <source src="projects/subulin/video/subulin-demo.mp4" type="video/mp4">
+    Your browser doesn't support embedded video. You can download the demo
+    <a href="projects/subulin/video/subulin-demo.mp4">here</a>.
+  </video>
+  <p class="video-caption">Live demo — presented during my PFE defense</p>
+</div>
+
+<div class="modal-tech-tags">
+  <span class="modal-tech-tag">Chrome Extension (Manifest V3)</span>
+  <span class="modal-tech-tag">FastAPI</span>
+  <span class="modal-tech-tag">Azure OpenAI</span>
+  <span class="modal-tech-tag">LangGraph</span>
+  <span class="modal-tech-tag">RAG</span>
+  <span class="modal-tech-tag">Azure Cosmos DB</span>
+</div>
+
+<div class="project-details">
+  <h3>Project Overview</h3>
+  <p>
+    Subul IN is an AI-powered Chrome extension for LinkedIn, built as a premium feature of Smartovate's
+    Subul e-learning platform. It was developed as my final year project (PFE) for the Master's in Data
+    Analytics and Artificial Intelligence, defended in July 2026 under the academic supervision of
+    Pr. Moncef Boughrous. The extension helps professionals grow their LinkedIn presence with
+    AI-generated posts, profile optimization, career gap analysis, connection scoring, and a
+    retrieval-augmented chat assistant, all running directly inside the LinkedIn interface.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul class="feature-list">
+    <li>AI-generated LinkedIn posts tailored to the user's voice and goals</li>
+    <li>Profile optimization and scoring against industry benchmarks</li>
+    <li>Career gap analysis with personalized rewrite suggestions</li>
+    <li>Network connection scoring to prioritize high-value outreach</li>
+    <li>Retrieval-augmented (RAG) chat assistant for LinkedIn strategy questions</li>
+    <li>Multilingual semantic industry-alignment scoring using MiniLM embeddings</li>
+    <li>Secure JWT-based authentication between the extension and backend</li>
+    <li>Identity-safe content generation with server-side sanitization to prevent data leaks</li>
+  </ul>
+
+  <h3>Technical Implementation</h3>
+  <p>
+    The extension is built on Chrome's Manifest V3 architecture and communicates with a FastAPI backend
+    deployed on Azure App Service. Content generation runs on fine-tuned Azure OpenAI models
+    (GPT-4o-mini), including a dedicated post-generation model selected for its Pareto-optimal balance
+    of compliance, latency, and cost across the models evaluated. A LangGraph-based agentic workflow
+    orchestrates the different AI features, while Azure Cosmos DB stores user and session data. Profile
+    and gap-analysis features use multilingual MiniLM embeddings for semantic (rather than purely
+    keyword-based) industry matching, rolled out safely behind a feature flag with dual logging to
+    compare keyword and semantic scores in production.
+  </p>
+
+  <h3>Impact</h3>
+  <p>
+    In production, Subul IN processed thousands of AI requests for dozens of active users with a
+    success rate close to 99%, demonstrating both the reliability of the pipeline and the real-world
+    value of combining agentic AI workflows with a lightweight, in-browser user experience.
+  </p>
+</div>

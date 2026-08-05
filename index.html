@@ -19,17 +19,18 @@
     }
     
     .modal-content {
-      background-color: #1a1a2e;
+      background-color: #ffffff;
       margin: 2% auto;
       padding: 2.5rem;
       border-radius: 12px;
       max-width: 1200px;
       width: 90%;
       position: relative;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      color: #e6e6e6;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+      color: #1e293b;
       max-height: 90vh;
       overflow-y: auto;
+      border: 1px solid #e3e8f0;
     }
     
     .close-modal {
@@ -38,7 +39,7 @@
       right: 1.8rem;
       font-size: 2.5rem;
       font-weight: bold;
-      color: #ccc;
+      color: #94a3b8;
       cursor: pointer;
       transition: color 0.3s;
       z-index: 1001;
@@ -77,7 +78,32 @@
     
     .screenshot p {
       padding: 1rem;
-      background: #16213e;
+      background: #f1f5f9;
+      color: #334155;
+      margin: 0;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .project-video {
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+      border: 1px solid #e3e8f0;
+    }
+
+    .project-video video {
+      width: 100%;
+      max-height: 520px;
+      display: block;
+      background: #0f172a;
+    }
+
+    .project-video .video-caption {
+      padding: 0.9rem 1rem;
+      background: #f1f5f9;
+      color: #334155;
       margin: 0;
       font-size: 0.9rem;
       text-align: center;
@@ -204,20 +230,20 @@
   <!-- Navigation -->
 <nav class="navbar">
   <div class="nav-container">
-    <div class="logo">EL</div>
+    <div class="logo">Portfolio</div>
     <div class="nav-right">
       <ul class="nav-menu">
-        <li><a href="#home" class="nav-link" onclick="showPage('home')" data-key="nav.home">Home</a></li>
-        <li><a href="#about" class="nav-link" onclick="showPage('about')" data-key="nav.about">About</a></li>
+        <li><a href="#home" class="nav-link" onclick="showPage('home'); return false;" data-key="nav.home">Home</a></li>
+        <li><a href="#about" class="nav-link" onclick="showPage('about'); return false;" data-key="nav.about">About</a></li>
         <li class="dropdown">
           <a class="nav-link" data-key="nav.projects">Projects</a>
           <ul class="dropdown-content">
-            <li><a href="#university" onclick="showPage('university')" data-key="nav.university">University</a></li>
-            <li><a href="#personal" onclick="showPage('personal')" data-key="nav.personal">Personal</a></li>
-            <li><a href="#work" onclick="showPage('work')" data-key="nav.work">Work</a></li>
+            <li><a href="#university" onclick="showPage('university'); return false;" data-key="nav.university">University</a></li>
+            <li><a href="#personal" onclick="showPage('personal'); return false;" data-key="nav.personal">Personal</a></li>
+            <li><a href="#work" onclick="showPage('work'); return false;" data-key="nav.work">Work</a></li>
           </ul>
         </li>
-        <li><a href="#contact" class="nav-link" onclick="showPage('contact')" data-key="nav.contact">Contact</a></li>
+        <li><a href="#contact" class="nav-link" onclick="showPage('contact'); return false;" data-key="nav.contact">Contact</a></li>
       </ul>
       <!-- <div class="language-selector">
         <button class="lang-btn active" onclick="setLanguage('en')" id="lang-en">EN</button>
@@ -233,12 +259,18 @@
       <section class="hero">
         <div class="container">
           <div class="hero-content">
-            <h1>EL KABRANE Laila</h1>
-            <h2 data-key="hero.title">Data Analyst & AI Specialist</h2>
+            <div class="hero-text">
+              <h1>EL KABRANE Laila</h1>
+              <h2 data-key="hero.title">Master's Graduate in Data Analytics & AI</h2>
 <p data-key="hero.description">
 I turn data into insights and ideas into action. From building AI models to uncovering hidden patterns, I transform complex datasets into solutions that make a real impact. I love exploring challenges, experimenting with new tools, and creating projects that bridge technology and meaningful results. Dive in, check out my work, and see how data and AI can bring ideas to life.
 </p>
-            <a href="#contact" class="cta-button" onclick="showPage('contact')" data-key="hero.cta">Get In Touch</a>
+              <a href="#contact" class="cta-button" onclick="showPage('contact'); return false;" data-key="hero.cta">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+              <div class="hero-photo-blob"></div>
+              <img src="images/laila-photo.jpg" alt="Laila Elkabrane" class="hero-photo" />
+            </div>
           </div>
         </div>
       </section>
@@ -254,7 +286,7 @@ I turn data into insights and ideas into action. From building AI models to unco
       <div class="about-grid">
         <div class="about-text">
           <h3 data-key="about.story.title">My Story</h3>
-          <p data-key="about.story.text1">I’m a Master’s student specializing in Data Analytics and Artificial Intelligence at Ibn Zohr University. Over the years, I’ve explored software development, web technologies, and AI, building projects that range from real-time object detection and AI painting systems to data-driven energy forecasts and cybersecurity platforms.</p>
+          <p data-key="about.story.text1">I’m a Master’s graduate in Data Analytics and Artificial Intelligence from Ibn Zohr University, where I completed my final year project on an AI-powered LinkedIn growth assistant during an internship at Smartovate. Over the years, I’ve explored software development, web technologies, and AI, building projects that range from real-time object detection and AI painting systems to data-driven energy forecasts and cybersecurity platforms.</p>
           
           <p data-key="about.story.text2">I’m passionate about transforming raw data into meaningful insights and creating solutions that combine technical depth with practical impact. Every project I tackle is a chance to innovate and learn.</p>
         </div>
@@ -303,7 +335,7 @@ I turn data into insights and ideas into action. From building AI models to unco
           <div class="projects-grid">
             <div class="project-card">
               <div class="project-image">
-                <img src="projects/cyberMentor/images/logo.png" alt="Project Image" />
+                <img src="projects/cyberMentor/images/logoo.png" alt="Project Image" />
               </div>
               <div class="project-content">
                 <h3 class="project-title" data-key="university.project1.title">CyberMentor – AI-Powered Cyber Attack Analysis & Defense Assistant</h3>
@@ -333,7 +365,7 @@ I turn data into insights and ideas into action. From building AI models to unco
             
             <div class="project-card">
               <div class="project-image">
-                <img src="projects/elect/images/logo.png" alt="Project Image" />
+                <img src="projects/elect/images/logoo.png" alt="Project Image" />
               </div>
               <div class="project-content">
                 <h3 class="project-title" data-key="university.project2.title"> PredictEnergy-MA – Electricity Consumption Forecasting in Morocco</h3>
@@ -363,7 +395,7 @@ I turn data into insights and ideas into action. From building AI models to unco
             
             <div class="project-card">
               <div class="project-image">
-                <img src="projects/esp/images/logo.png" alt="Project Image" />
+                <img src="projects/esp/images/logoo.png" alt="Project Image" />
               </div>
               <div class="project-content">
                 <h3 class="project-title" data-key="university.project3.title">IoT Home Security System</h3>
@@ -393,7 +425,7 @@ I turn data into insights and ideas into action. From building AI models to unco
             </div>
             <div class="project-card">
               <div class="project-image">
-                <img src="projects/paint/images/logo.png" alt="Project Image" />
+                <img src="projects/paint/images/logoo.png" alt="Project Image" />
               </div>
 
 <div class="project-content">
@@ -443,7 +475,7 @@ I turn data into insights and ideas into action. From building AI models to unco
             <!-- Reddit Sentiment Intelligence Platform -->
             <div class="project-card">
               <div class="project-image">
-                <img src="projects/reddit-sentiment/images/logo1.png" alt="Project Image" />
+                <img src="projects/reddit-sentiment/images/logoo.png" alt="Project Image" />
               </div>
               <div class="project-content">
                 <h3 class="project-title">Reddit Sentiment Intelligence</h3>
@@ -486,7 +518,7 @@ I turn data into insights and ideas into action. From building AI models to unco
           <div class="projects-grid">
             <div class="project-card">
              <div class="project-image">
-                <img src="projects/linkedin/images/logo.png" alt="Project Image" />
+                <img src="projects/linkedin/images/logoo.png" alt="Project Image" />
               </div>
 
 <div class="project-content">
@@ -520,9 +552,76 @@ I turn data into insights and ideas into action. From building AI models to unco
 </div>
 
             </div>
-            
-            
-            
+
+            <!-- Subul IN - PFE Project -->
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/subulin/images/logoo.png" alt="Subul IN Demo" />
+              </div>
+
+<div class="project-content">
+  <h3 class="project-title">
+    Subul IN – AI-Powered LinkedIn Growth Assistant
+  </h3>
+
+  <p class="project-description">
+    My final year project (PFE), built during my internship at Smartovate: an AI-powered Chrome
+    extension that helps professionals grow their LinkedIn presence through AI-generated posts,
+    profile optimization, gap analysis, connection scoring, and a RAG-based chat assistant.
+  </p>
+
+  <div class="project-tech">
+    <span class="tech-tag">Chrome Extension</span>
+    <span class="tech-tag">FastAPI</span>
+    <span class="tech-tag">Azure OpenAI</span>
+    <span class="tech-tag">LangGraph</span>
+    <span class="tech-tag">RAG</span>
+    <span class="tech-tag">NLP</span>
+  </div>
+
+  <div class="project-links">
+    <a href="#"
+   class="project-link"
+   onclick="openProject('projects/subulin/details.html'); return false;">
+   View Details →
+</a>
+  </div>
+</div>
+            </div>
+
+            <!-- CV Booster -->
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/cvbooster/images/logoo.png" alt="CV Booster Project" />
+              </div>
+
+<div class="project-content">
+  <h3 class="project-title">
+    CV Booster – AI-Powered CV Optimization
+  </h3>
+
+  <p class="project-description">
+    Built during my internship at Smartovate, alongside Subul IN: a 5-step tool that scores a CV
+    against ATS criteria, auto-enriches it with the user's SUBUL labs and certifications, then
+    boosts it into an ATS-optimized, recruiter-ready document in multiple formats.
+  </p>
+
+  <div class="project-tech">
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">FastAPI</span>
+    <span class="tech-tag">Azure OpenAI</span>
+    <span class="tech-tag">ATS Scoring</span>
+  </div>
+
+  <div class="project-links">
+    <a href="#"
+   class="project-link"
+   onclick="openProject('projects/cvbooster/details.html'); return false;">
+   View Details →
+</a>
+  </div>
+</div>
+            </div>
             
           
           </div>

@@ -1,0 +1,29 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg)"/>
+  <circle cx="80" cy="100" r="34" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="320" cy="55" r="20" fill="rgba(255,255,255,0.12)"/>
+  <!-- chrome extension puzzle piece -->
+  <g transform="translate(150,60)">
+    <path d="M20 0 H70 V20 a12 12 0 0 1 0 24 V64 H0 V40 a12 12 0 0 0 0-24 V0 H20 Z"
+          fill="rgba(255,255,255,0.95)"/>
+  </g>
+  <!-- network / AI nodes -->
+  <g stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="rgba(255,255,255,0.95)">
+    <circle cx="230" cy="150" r="6"/>
+    <circle cx="260" cy="130" r="6"/>
+    <circle cx="200" cy="130" r="6"/>
+    <circle cx="230" cy="110" r="6"/>
+    <line x1="230" y1="150" x2="260" y2="130"/>
+    <line x1="230" y1="150" x2="200" y2="130"/>
+    <line x1="230" y1="150" x2="230" y2="110"/>
+    <line x1="200" y1="130" x2="230" y2="110"/>
+    <line x1="260" y1="130" x2="230" y2="110"/>
+  </g>
+  <text x="200" y="185" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">Subul IN</text>
+</svg>

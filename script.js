@@ -145,6 +145,25 @@ window.addEventListener('popstate', () => {
   lightboxImg.src = 'projects/paint/images/3.png';
   caption.innerHTML = 'Gesture-controlled erasing of drawn lines in real time';
 }
+      if (imageId === 'cvb-1') {
+        lightboxImg.src = 'projects/cvbooster/images/1.png';
+        caption.innerHTML = 'Landing page: import a CV to start the AI-powered boost';
+      } else if (imageId === 'cvb-2') {
+        lightboxImg.src = 'projects/cvbooster/images/2.png';
+        caption.innerHTML = 'Initial ATS score diagnosis on the uploaded CV';
+      } else if (imageId === 'cvb-3') {
+        lightboxImg.src = 'projects/cvbooster/images/3.png';
+        caption.innerHTML = 'Enrichment step: pulling labs, certifications and quiz results from the SUBUL platform';
+      } else if (imageId === 'cvb-4') {
+        lightboxImg.src = 'projects/cvbooster/images/4.png';
+        caption.innerHTML = 'Detailed before/after ATS score breakdown after boosting (39 → 94)';
+      } else if (imageId === 'cvb-5') {
+        lightboxImg.src = 'projects/cvbooster/images/5.png';
+        caption.innerHTML = 'Explainable scoring: why a section scored low and the exact fix to apply';
+      } else if (imageId === 'cvb-6') {
+        lightboxImg.src = 'projects/cvbooster/images/6.png';
+        caption.innerHTML = 'Final result: boosted CV ready to download in multiple formats';
+      }
 
       
       lightbox.style.display = 'block';
