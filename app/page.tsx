@@ -23,7 +23,7 @@ export default function Overview() {
 
   return (
     <>
-      <PageHeader title="Portfolio" subtitle="Data analytics and applied AI, shown as a live dashboard" />
+      <PageHeader title="Portfolio" subtitle="Junior Data and AI Engineer, Morocco" />
 
       <div className="grid">
         <Card className="s12">
@@ -133,7 +133,7 @@ export default function Overview() {
           <Pipeline steps={path} />
         </Card>
 
-        <Card className="s12" title="Projects" sub="Each one opens as its own dashboard">
+        <Card className="s12" title="Projects" >
           <div className="minis">
             {projects.map((p) => (
               <Link key={p.slug} href={`/projects/${p.slug}`} className="mini">
