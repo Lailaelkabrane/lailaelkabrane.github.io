@@ -6,7 +6,7 @@ import { studies, internships } from "@/data/portfolio";
 export default function Experience() {
   return (
     <>
-      <PageHeader title="Journey" subtitle="Studies and internships, newest first" />
+      <PageHeader title="Journey" subtitle="Education and internships" />
       <div className="grid">
         <Card className="s6" title="Studies">
           <Timeline items={studies} />
