@@ -4,7 +4,7 @@ import SkillsExplorer from "@/components/SkillsExplorer";
 export default function Skills() {
   return (
     <>
-      <PageHeader title="Skills" subtitle="Search and filter the tools used across analysis, BI, engineering and AI" />
+      <PageHeader title="Skills" subtitle="Tools across AI, backend, data and vision" />
       <SkillsExplorer />
     </>
   );
